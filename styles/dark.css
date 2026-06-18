@@ -1,11 +1,8 @@
-
 :root.theme-dark {
-  --nav-color:#FF0070;
-
+  --nav-color: #ff0070;
 }
- 
-.header__theme-menu-button_active{
-  outline: 1px solid var(--nav-color);
- pointer-events: none;
-} 
 
+.header__theme-menu-button_active {
+  outline: 1px solid var(--nav-color);
+  pointer-events: none;
+}
