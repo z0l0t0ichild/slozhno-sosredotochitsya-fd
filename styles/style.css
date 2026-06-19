@@ -267,10 +267,6 @@
     --main_gap: 20px;
   }
 
-  .header_element_decor {
-    --main_gap: 20px;
-  }
-
   .header_title {
     justify-self: left;
     padding-left: 0;
