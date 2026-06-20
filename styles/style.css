@@ -22,10 +22,6 @@
   padding-top: 20px;
 }
 
-.header__theme-menu-button_active {
-  outline: 1px solid var(--nav_color);
-  pointer-events: none;
-}
 .title {
   font-family: "IBM Plex mono", monospace;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -80,7 +76,6 @@
 
 .header_element_decor {
   font-family: "IBM Plex mono", monospace;
-  font-size: 18px;
   font-weight: 400;
   position: absolute;
   top: 10px; /*исправил маргин на топ*/

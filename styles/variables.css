@@ -4,7 +4,7 @@
 */
 :root {
   --path_background_image: url(../images/cover-image-dark.png);
-  --background_color: #002137;
+  --background_color: #000028;
   --accent_color: #ff0070;/*вроде не используется*/
   --text_shadow_color: #ff0070;
   --main_line_height: 1.3;
