@@ -1,8 +1,21 @@
 :root.theme-dark {
-  --nav-color: #ff0070;
+  --path_background_image: url(../images/cover-image-dark.png);
+  --background_color: #002137;
+  --accent_color: #ff0070;
+  --text_shadow_color: #ff0070;
+  --main_line_height: 1.3;
+  --main_gap: 10px;
+  --main_text_size: 18px;
+  --nav_color: #ff0070;
+  --section_text_color: #f1b2ce;
+  --color_title_header_footer: #db00ff;
+  --content_title_color: #ff0070;
+  --back_text: #ff0070;
+  --text_color: #000028;
+  
+  .header_element_decor {
+    display: block;
+  }
 }
 
-.header__theme-menu-button_active {
-  outline: 1px solid var(--nav-color);
-  pointer-events: none;
-}
+

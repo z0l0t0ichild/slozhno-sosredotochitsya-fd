@@ -5,12 +5,12 @@
 :root {
   --path_background_image: url(../images/cover-image-dark.png);
   --background_color: #002137;
-  --accent-color: #ff0070;
+  --accent_color: #ff0070;/*вроде не используется*/
   --text_shadow_color: #ff0070;
-  --main-line-height: 1.3;
+  --main_line_height: 1.3;
   --main_gap: 10px;
   --main_text_size: 18px;
-  --nav-color: #ff0070;
+  --nav_color: #ff0070;
   --section_text_color: #f1b2ce;
   --color_title_header_footer: #db00ff;
   --content_title_color: #ff0070;
@@ -18,29 +18,6 @@
   --text_color: #000;
 }
 
-:root.theme-dark {
-  --path_background_image: url(../images/cover-image-dark.png);
-  --background_color: #002137;
-  --accent-color: #ff0070;
-  --text_shadow_color: #ff0070;
-  --main-line-height: 1.3;
-  --main_gap: 10px;
-  --main_text_size: 18px;
-  --nav-color: #ff0070;
-  --section_text_color: #f1b2ce;
-  --color_title_header_footer: #db00ff;
-  --content_title_color: #ff0070;
-  --back_text: #ff0070;
-  --text_color: #000;
-}
 
-:root.theme-light {
-  --path_background_image: url(../images/cover-image-light.png);
-  --accent-color: #ff8dcb;
-  --nav-color: #353430;
-  --section_text_color: #353430;
-  --content_title_color: #353430;
-  --back_text: #ff8dcb;
-  --color_title_header_footer: #ffc2e6;
-  --text_shadow_color: #ff8dcb;
-}
+
+

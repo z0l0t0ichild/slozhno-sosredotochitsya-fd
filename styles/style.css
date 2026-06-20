@@ -1,7 +1,6 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background-image: var(--path_background_image);
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-color: var(--background_color);
@@ -24,18 +23,20 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid #ff0070;
+  outline: 1px solid var(--nav_color);
+  pointer-events: none;
 }
-
-.header_title {
-  font-family: "IBM Plex mono", sans-serif;
+.title {
+  font-family: "IBM Plex mono", monospace;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--color_title_header_footer);
   font-weight: 700;
-  text-shadow: 4px 4px 0 var(--text_shadow_color);
   line-height: 83%;
   align-self: center;
   justify-self: center;
+}
+.header_title {
+  text-shadow: 4px 4px 0 var(--text_shadow_color);
   padding-left: 10px;
 }
 
@@ -48,8 +49,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-end: 1px solid var(--nav-color);
-  border-block-start: 1px solid var(--nav-color);
+  border-inline-end: 1px solid var(--nav_color);
+  border-block-start: 1px solid var(--nav_color);
   inset-inline-end: var(--main_gap);
   inset-block-start: var(--main_gap);
 }
@@ -59,17 +60,18 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-inline-start: 1px solid var(--nav-color);
-  border-block-end: 1px solid var(--nav-color);
+  border-inline-start: 1px solid var(--nav_color);
+  border-block-end: 1px solid var(--nav_color);
   inset-inline-start: var(--main_gap);
   inset-block-end: var(--main_gap);
 }
 
 .header_text {
+  color: var(--text_color);
   font-size: 18px;
   justify-self: center;
   align-self: center;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: 700;
   margin-bottom: 30px;
   margin-left: 10px;
@@ -77,11 +79,14 @@
 }
 
 .header_element_decor {
-  margin-top: 10px;
+  font-family: "IBM Plex mono", monospace;
+  font-size: 18px;
+  font-weight: 400;
   position: absolute;
-  color: var(--nav-color);
+  top: 10px; /*исправил маргин на топ*/
+  color: var(--nav_color);
   font-size: var(--main_text_size);
-  line-height: var(--main-line-height);
+  line-height: var(--main_line_height);
   text-transform: uppercase;
   inset-inline-end: calc(var(--main_gap) + 28px);
   inset-inline-start: calc(var(--main_gap) + 2px);
@@ -91,14 +96,22 @@
 .header_element_decor::after {
   content: "";
   position: absolute;
-  inline-size: 10px;
-  block-size: 10px;
-  margin: -5px -20px 0 0;
+  inline-size: 9px;
+  block-size: 9px;
+  top: 0px;
+  right: -20px;
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--nav-color);
-  background-color: var(--nav-color);
-  inset-inline-end: 0;
-  inset-block-start: 50%;
+  box-shadow: 0 0 4px 2px var(--nav_color);
+  background-color: var(--nav_color);
+  inset-block-start: 35%;
+}
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--nav_color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--nav_color);
+  outline: none;
 }
 
 .header__theme-menu-list {
@@ -110,12 +123,16 @@
 
 .header__theme-menu-button {
   background-color: transparent;
-  color: var(--nav-color);
+  color: var(--nav_color);
   border: none;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   text-transform: lowercase;
   padding: 1.5px 13px;
   margin-right: 10px;
+}
+.header__theme-menu-button_active {
+  outline: 1px solid var(--nav_color);
+  pointer-events: none;
 }
 
 .title-decor {
@@ -136,11 +153,11 @@
 }
 
 .block {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
 }
 
 .content_section_title {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   color: var(--content_title_color);
   font-size: 18px;
   line-height: 23.4px;
@@ -191,6 +208,7 @@
 }
 
 .block_title_image {
+  font-family: "IBM Plex mono", monospace;
   color: var(--text_color);
   background-color: var(--back_text);
   font-size: 18px;
@@ -203,39 +221,15 @@
   display: grid;
   grid-template-columns: 1fr;
   align-self: center;
-  justify-self: center;
   height: 100dvh;
-  min-height: 667px;
+  min-height: 668px;
   margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .footer_title {
-  padding-left: 0;
-}
-
-.decorated-zone_footer {
-  position: relative;
-}
-.decorated-zone_footer::before {
-  content: "";
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  border-inline-end: 1px solid var(--nav-color);
-  border-block-start: 1px solid var(--nav-color);
-  inset-inline-end: -5px;
-  inset-block-start: var(--main_gap);
-}
-
-.decorated-zone_footer::after {
-  content: "";
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  border-inline-start: 1px solid var(--nav-color);
-  border-block-end: 1px solid var(--nav-color);
-  inset-inline-start: -5px;
-  inset-block-end: var(--main_gap);
+  text-shadow: 2px 2px 0 var(--text_shadow_color);
 }
 
 .content_ref:hover {
@@ -256,7 +250,8 @@
   }
 
   .header_element_decor {
-    margin-top: 20px;
+    --main_gap: 20px;
+    top: 20px; /*исправил маргин на топ*/
   }
 
   .decorated-zone::before {
@@ -281,7 +276,6 @@
     justify-self: end;
     align-self: start;
     inline-size: 364px;
-    block-size: 117px;
     margin-top: 42px;
     margin-right: 20px;
   }
@@ -374,19 +368,7 @@
     min-height: 1024px;
     margin-top: 60px;
   }
-
-  .decorated-zone_footer::before {
-    --main_gap: 20px;
-    inset-inline-end: -180px;
-  }
-
-  .decorated-zone_footer::after {
-    inset-inline-start: -180px;
-    margin-bottom: 10px;
-  }
 }
-
-/*************************************************************************************/
 
 @media (width>=1024px) {
   .header {
@@ -407,13 +389,12 @@
     margin-right: 0;
   }
 
-  .header_title {
+  .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header_text {
     inline-size: 491px;
-    block-size: 71px;
     margin-top: 50px;
     margin-right: 20px;
   }
@@ -450,15 +431,5 @@
 
   .footer {
     min-height: 768px;
-  }
-
-  .decorated-zone_footer::before {
-    --main_gap: 20px;
-    inset-inline-end: -255px;
-  }
-
-  .decorated-zone_footer::after {
-    inset-inline-start: -255px;
-    margin-bottom: 10px;
   }
 }
