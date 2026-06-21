@@ -8,6 +8,7 @@
   --color_title_header_footer: #ffc2e6;
   --text_shadow_color: #ff8dcb;
   --text_color: #353430;
+  --hover_button:rgb(50, 49, 45,0.4);
 
 .header_element_decor {
     display: none;
@@ -25,6 +26,7 @@
     --color_title_header_footer: #ffc2e6;
     --text_shadow_color: #ff8dcb;
     --text_color: #353430;
+    --hover_button:rgb(50, 49, 45,0.4);
   }
 .header_element_decor {
     display: none;

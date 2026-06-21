@@ -101,7 +101,7 @@
   inset-block-start: 35%;
 }
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--nav_color);
+  outline: 1px solid var(--hover_button);
 }
 
 .header__theme-menu-button:focus-visible {
